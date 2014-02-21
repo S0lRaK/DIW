@@ -10,10 +10,17 @@
         <script type="text/javascript">
             var respuesta1 = "";
             var video;
+            video = document.getElementById("vid");
+            var pausa1 = false;
+          
             function cargar() {
+                $("#btn_play").click(function () {
+                    video.play();
+                });
+                $("#btn_pause").click(function () {
+                    video.pause();
+                });
                 video = document.getElementById("vid");
-                   // video.requestFullscreen();
-                var pausa1 = false;
                 video.addEventListener('timeupdate', function () {
                     if (video.currentTime > 23 && pausa1 == false) {
                         video.pause();
@@ -60,13 +67,57 @@
                     video.play();
                 }, 1000);
             }
-            
+
+            function volumeDown() {
+                video.volume = video.volume - 0.1;
+            }
+
+            function volumeUp() {
+                video.volume = video.volume + 0.1;
+            }
+
+            function fullScreen() {
+                if (!document.fullscreenElement &&    // alternative standard method
+      !document.mozFullScreenElement && !document.webkitFullscreenElement && !document.msFullscreenElement) {  // current working methods
+                    if (document.documentElement.requestFullscreen) {
+                        document.documentElement.requestFullscreen();
+                    } else if (document.documentElement.msRequestFullscreen) {
+                        document.documentElement.msRequestFullscreen();
+                    } else if (document.documentElement.mozRequestFullScreen) {
+                        document.documentElement.mozRequestFullScreen();
+                    } else if (document.documentElement.webkitRequestFullscreen) {
+                        document.documentElement.webkitRequestFullscreen(Element.ALLOW_KEYBOARD_INPUT);
+                    }
+                } else {
+                    if (document.exitFullscreen) {
+                        document.exitFullscreen();
+                    } else if (document.msExitFullscreen) {
+                        document.msExitFullscreen();
+                    } else if (document.mozCancelFullScreen) {
+                        document.mozCancelFullScreen();
+                    } else if (document.webkitExitFullscreen) {
+                        document.webkitExitFullscreen();
+                    }
+                }
+            }               
             
         </script>
 	</head>
 	<body onload="cargar()">
-		<video id="vid" width="400" height="258" src="Snowboard.mp4" controls>
+        <div class="container" id="cont">
+            <div class="row clearfix">
+                <div class="col-md-12 column">
+		            <video id="vid"  src="Snowboard.mp4" width="100%" height="91%" ></video>
+                </div>
+            </div>
         
-        </video>
+            <div class="row clearfix">
+			    <div class="col-md-12 column">
+				    <div class="btn-group btn-group-lg" style="padding-left:35%;">
+						    <button class="btn btn-default" type="button" id="btn_play" ><em class="glyphicon glyphicon-play"></em></button> <button class="btn btn-default" id="btn_pause" type="button"><em class="glyphicon glyphicon-pause"></em></button> <button class="btn btn-default" id="btn_up" onclick="volumeUp();" type="button"><em class="glyphicon glyphicon-volume-up"></em></button> <button class="btn btn-default" id="btn_down" onclick="volumeDown();" type="button"><em class="glyphicon glyphicon-volume-down"></em></button><button class="btn btn-default" id="btn_screen" onclick="fullScreen();" type="button"><em class="glyphicon glyphicon-fullscreen"></em></button>
+				    </div>
+			    </div>
+		    </div>
+        </div>
 	</body>
 </html>
