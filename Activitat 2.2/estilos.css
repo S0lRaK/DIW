@@ -1,0 +1,87 @@
+*{
+	margin:0;
+	padding:0;
+}
+html, body{
+	width:100%;
+	height:100%;
+}
+body{
+	font-family: 'Arial', cursive;
+	background:green;
+}
+a{
+	text-decoration:none;
+	color:#fff;
+}
+a:hover{
+	color:#FFC400;
+}
+p{
+	padding-top:20%;
+	width:100%;
+	color:#fff;
+	text-align:center;
+	font-size:6em;
+	-webkit-text-stroke:1px #000;
+}
+ul{
+	display:inline-block;
+}
+#s1, #s2, #s3{
+	width:1400px;
+	height:600px;
+	text-align:center;
+	margin-top:6.7%;
+}
+#s1{
+
+	background-image: url("section1.jpg");
+	background-size:cover;
+	position:absolute;
+}
+#s2{
+
+	background-image: url("section2.jpg");
+	background-size:cover;
+	position:absolute;
+	margin-left:1400px;
+}
+#s3{
+
+	background-image: url("section3.jpg");
+	background-size:cover;
+	position:absolute;
+	margin-left:2800px;
+}
+.fixed{
+	z-index:1001;
+	height: 80px;
+	position:fixed;
+	width:100%;
+	background-color: black;
+	background-image: url("titulo.png");
+	background-position: center;
+	background-repeat: no-repeat;
+	
+}
+.fixed2{
+	z-index:998;
+	margin-top: 5.4%;
+	height: 40px;
+	position:fixed;
+	width:100%;
+	background: black;
+	border-top:1px solid white;
+}
+.iconos{
+	height: 25px;
+	width: 25px;
+	margin-right: 7px;
+}
+.divicon{
+	float: right;
+	padding-bottom: 2px;
+	padding-top: 7px;
+	padding-right: 10px;
+}

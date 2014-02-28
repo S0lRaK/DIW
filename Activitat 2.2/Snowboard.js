@@ -2,7 +2,6 @@ var respuesta1 = "";
 var respuesta2 = ""; 
 var respuesta3 = "";
 var video;
-//video = document.getElementById("vid");
 pregunta1 = true;
 pregunta2 = true;
 pregunta3 = true;
@@ -17,8 +16,19 @@ function cargar()
     {
         video.pause();
     });
+
+    video = document.getElementById("vid"); 
+    video.addEventListener('ended', function () {
+        var respuesta1 = "";
+        var respuesta2 = ""; 
+        var respuesta3 = "";
+        var video;
+        pregunta1 = true;
+        pregunta2 = true;
+        pregunta3 = true;
+        respuestas = true;
+    }, false);
     
-    video = document.getElementById("vid"); // 2ª vez?
     video.addEventListener('timeupdate', function() {
 
     if (video.currentTime > 17.5 && pregunta1 == true)
@@ -175,23 +185,8 @@ function cargar()
         $('#myModal').modal('show');
         $("#modClose").click(function () {
             video.play();
+            $("#img_conc").attr("style", "visibility:visible;padding-top:2%;");
         });
-        //bootbox.dialog({
-        //    message: "1. Respuesta --> " + respuesta1 + "<br /> 2. Respuesta --> " + respuesta2 + "<br /> 3. Respuesta --> " + respuesta3,
-        //    title: "Respuestas",
-        //    closeButton: false,
-        //    animate: true,
-        //    buttons: {
-        //        ok: {
-        //            label: "Ok",
-        //            className: "btn-primary",
-        //            callback: function () {
-                        
-        //                video.pause();
-        //            }
-        //        }
-        //    }
-        //});
     }
 });
 }
