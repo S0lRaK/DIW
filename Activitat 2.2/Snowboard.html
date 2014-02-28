@@ -1,192 +1,13 @@
 <html>
 	<head>
-		<title> Video interactiu </title>
-        <script type="text/javascript" src="jquery-1.3.2.js"></script>
+		<title> Snowboard tuto </title>
         <link href="dist/css/bootstrap.css" rel="stylesheet">
 	    <link href="dist/css/bootstrap-theme.css" rel="stylesheet">
+        <script type="text/javascript" src="jquery-1.3.2.js"></script>
         <script type="text/javascript" src="dist/js/bootstrap.js"></script>
         <script type="text/javascript" src="dist/js/bootstrap.min.js"></script>
         <script type="text/javascript" src="bootbox.js"></script> 
-        
-        <script type="text/javascript">
-
-            var respuesta1 = "";
-            var respuesta2 = ""; 7
-            var respuesta3 = "";
-            var video;
-            pregunta1 = true;
-            pregunta2 = true;
-            pregunta3 = true;
-            video = document.getElementById("vid");
-            function cargar() {
-                $("#btn_play").click(function () {
-                    video.play();
-                });
-                $("#btn_pause").click(function () {
-                    video.pause();
-                });
-                video = document.getElementById("vid");
-                video.addEventListener('timeupdate', function () {
-                    if (video.currentTime > 17.5 && pregunta1 == true) {
-                        video.pause();
-                        bootbox.dialog({
-                            message: "a) Sólo la tabla. <br /> b) La tabla y las botas. <br /> c) La tabla, las botas, el traje y el casco.",
-                            title: "¿Qué material necesitas para hacer snowboard?",
-                            closeButton: false,
-                            animate: true,
-                            buttons: {
-                                success: {
-                                    label: "a",
-                                    className: "btn-primary",
-                                    callback: function () {
-                                        respuesta1 = "a";
-                                        pregunta1 = false;
-                                        rePlay();
-                                    }
-                                },
-                                danger: {
-                                    label: "b",
-                                    className: "btn-primary",
-                                    callback: function () {
-                                        respuesta1 = "b";
-                                        pregunta1 = false;
-                                        rePlay();
-                                    }
-                                },
-                                main: {
-                                    label: "c",
-                                    className: "btn-primary",
-                                    callback: function () {
-                                        respuesta1 = "c";
-                                        pregunta1 = false;
-                                        rePlay();
-                                    }
-                                }
-
-                            }
-                        });
-                    }
-                    if (video.currentTime > 37.5 && pregunta2 == true) {
-                        video.pause();
-                        bootbox.dialog({
-                            message: "a) Girando el tronco superior. <br /> b) Inclinando el cuerpo hacia delante. <br /> c) Inclinando el cuerpo hacia atrás.",
-                            title: "¿Cómo girarías?",
-                            closeButton: false,
-                            animate: true,
-                            buttons: {
-                                success: {
-                                    label: "a",
-                                    className: "btn-primary",
-                                    callback: function () {
-                                        respuesta2 = "a";
-                                        pregunta2 = false;
-                                        rePlay();
-                                    }
-                                },
-                                danger: {
-                                    label: "b",
-                                    className: "btn-primary",
-                                    callback: function () {
-                                        respuesta2 = "b";
-                                        pregunta2 = false;
-                                        rePlay();
-                                    }
-                                },
-                                main: {
-                                    label: "c",
-                                    className: "btn-primary",
-                                    callback: function () {
-                                        respuesta2 = "c";
-                                        pregunta2 = false;
-                                        rePlay();
-                                    }
-                                }
-
-                            }
-                        });
-                    }
-                    if (video.currentTime > 50.5 && pregunta3 == true) {
-                        video.pause();
-                        bootbox.dialog({
-                            message: "a) Tirándome al suelo. <br /> b) Clavando el lateral trasero de la tabla. <br /> c) Clavando el lateral delantero de la tabla.",
-                            title: "¿Como frenarías?",
-                            closeButton: false,
-                            animate: true,
-                            buttons: {
-                                success: {
-                                    label: "a",
-                                    className: "btn-primary",
-                                    callback: function () {
-                                        respuesta3 = "a";
-                                        pregunta3 = false;
-                                        rePlay();
-                                    }
-                                },
-                                danger: {
-                                    label: "b",
-                                    className: "btn-primary",
-                                    callback: function () {
-                                        respuesta3 = "b";
-                                        pregunta3 = false;
-                                        rePlay();
-                                    }
-                                },
-                                main: {
-                                    label: "c",
-                                    className: "btn-primary",
-                                    callback: function () {
-                                        respuesta3 = "c";
-                                        pregunta3 = false;
-                                        rePlay();
-                                    }
-                                }
-
-                            }
-                        });
-                    }
-                });
-            }
-
-            function rePlay() {
-                setTimeout(function () {
-                    video.play();
-                }, 1000);
-            }
-
-            function volumeDown() {
-                video.volume = video.volume - 0.1;
-            }
-
-            function volumeUp() {
-                video.volume = video.volume + 0.1;
-            }
-
-            function fullScreen() {
-                if (!document.fullscreenElement &&    // alternative standard method
-      !document.mozFullScreenElement && !document.webkitFullscreenElement && !document.msFullscreenElement) {  // current working methods
-                    if (document.documentElement.requestFullscreen) {
-                        document.documentElement.requestFullscreen();
-                    } else if (document.documentElement.msRequestFullscreen) {
-                        document.documentElement.msRequestFullscreen();
-                    } else if (document.documentElement.mozRequestFullScreen) {
-                        document.documentElement.mozRequestFullScreen();
-                    } else if (document.documentElement.webkitRequestFullscreen) {
-                        document.documentElement.webkitRequestFullscreen(Element.ALLOW_KEYBOARD_INPUT);
-                    }
-                } else {
-                    if (document.exitFullscreen) {
-                        document.exitFullscreen();
-                    } else if (document.msExitFullscreen) {
-                        document.msExitFullscreen();
-                    } else if (document.mozCancelFullScreen) {
-                        document.mozCancelFullScreen();
-                    } else if (document.webkitExitFullscreen) {
-                        document.webkitExitFullscreen();
-                    }
-                }
-            }               
-            
-        </script>
+        <script type="text/javascript" src="Snowboard.js"></script>
 	</head>
 	<body onload="cargar()">
         <div class="container">
@@ -195,11 +16,24 @@
 		            <video id="vid"  src="Snowboard.mp4" width="100%" height="91%" ></video>
                 </div>
             </div>
-        
             <div class="row clearfix">
 			    <div class="col-md-12 column">
 				    <div class="btn-group btn-group-lg" style="padding-left:35%;">
-						    <button class="btn btn-default" type="button" id="btn_play" ><em class="glyphicon glyphicon-play"></em></button> <button class="btn btn-default" id="btn_pause" type="button"><em class="glyphicon glyphicon-pause"></em></button> <button class="btn btn-default" id="btn_up" onclick="volumeUp();" type="button"><em class="glyphicon glyphicon-volume-up"></em></button> <button class="btn btn-default" id="btn_down" onclick="volumeDown();" type="button"><em class="glyphicon glyphicon-volume-down"></em></button><button class="btn btn-default" id="btn_screen" onclick="fullScreen();" type="button"><em class="glyphicon glyphicon-fullscreen"></em></button>
+					    <button class="btn btn-default" type="button" id="btn_play">
+                            <em class="glyphicon glyphicon-play"></em>
+                        </button>
+                        <button class="btn btn-default" id="btn_pause" type="button">
+                            <em class="glyphicon glyphicon-pause"></em>
+                        </button>
+                        <button class="btn btn-default" id="btn_up" onclick="volumeUp();" type="button">
+                            <em class="glyphicon glyphicon-volume-up"></em>
+                        </button>
+                        <button class="btn btn-default" id="btn_down" onclick="volumeDown();" type="button">
+                            <em class="glyphicon glyphicon-volume-down"></em>
+                        </button>
+                        <button class="btn btn-default" id="btn_screen" onclick="fullScreen();" type="button">
+                            <em class="glyphicon glyphicon-fullscreen"></em>
+                        </button>
 				    </div>
 			    </div>
 		    </div>
