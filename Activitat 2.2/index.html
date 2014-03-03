@@ -6,8 +6,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="">
   <meta name="author" content="">
-
-		
         <!-- Cargamos estilos y fuente -->
     <link rel="stylesheet" type="text/css" href="estilos.css">
     <link href='http://fonts.googleapis.com/css?family=Chela+One' rel='stylesheet' type='text/css'>
@@ -51,11 +49,37 @@
             <div class="container">
                 <div class="row clearfix">
                     <div class="col-md-12 column">
-		                <video id="vid"  src="Snowboard.mp4" width="70%" height="70%" ></video>
+		                <video id="vid"  src="Snowboard.mp4" width="67%" height="67%" ></video>
+                    </div>
+                    
+                </div>
+                <div class="row clearfix">
+                    <div class="col-md-3 column" >
+                        
+                    </div>
+                    <div class="col-md-6 column">
+		                <div class="progress">
+                            <div class="progress-bar progress-bar-info" role="progressbar" id="timeProgress"
+                                style="width: 0%">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-1 column" >
+                        <label id="videoTime"></label>
+                    </div>
+                    <div class="col-md-2 column" >
+                        
                     </div>
                 </div>
                 <div class="row clearfix">
-			        <div class="col-md-12 column">
+                    <div class="col-md-3 column" >
+                        
+                    </div>
+                    <div class="col-md-2 column" style="text-align:right">
+                        <label id="valVolumen"> </label><input type="range" min="0" max="1" value="1" step="0.1" id="volumen">
+                    </div>
+			        <div class="col-md-4 column">
+                        
 				        <div class="btn-group btn-group-lg">
 					        <button class="btn btn-default" type="button" id="btn_play">
                                 <em class="glyphicon glyphicon-play"></em>
@@ -63,17 +87,14 @@
                             <button class="btn btn-default" id="btn_pause" type="button">
                                 <em class="glyphicon glyphicon-pause"></em>
                             </button>
-                            <button class="btn btn-default" id="btn_up" onclick="volumeUp();" type="button">
-                                <em class="glyphicon glyphicon-volume-up"></em>
-                            </button>
-                            <button class="btn btn-default" id="btn_down" onclick="volumeDown();" type="button">
-                                <em class="glyphicon glyphicon-volume-down"></em>
-                            </button>
                             <button class="btn btn-default" id="btn_screen" onclick="fullScreen();" type="button">
                                 <em class="glyphicon glyphicon-fullscreen"></em>
                             </button>
 				        </div>
 			        </div>
+                     <div class="col-md-3 column" style="text-align:right">
+                        
+                    </div>
 		        </div>
             </div>
         </div>
