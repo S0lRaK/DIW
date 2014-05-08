@@ -1,0 +1,51 @@
+body {
+	text-align: center;
+}
+#video_section {
+	
+}
+.button {
+	-moz-box-shadow:inset 0px 1px 0px 0px #97c4fe;
+	-webkit-box-shadow:inset 0px 1px 0px 0px #97c4fe;
+	box-shadow:inset 0px 1px 0px 0px #97c4fe;
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #c9d4e0), color-stop(1, #eb1a36) );
+	background:-moz-linear-gradient( center top, #c9d4e0 5%, #eb1a36 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#c9d4e0', endColorstr='#eb1a36');
+	background-color:#c9d4e0;
+	-webkit-border-top-left-radius:37px;
+	-moz-border-radius-topleft:37px;
+	border-top-left-radius:37px;
+	-webkit-border-top-right-radius:0px;
+	-moz-border-radius-topright:0px;
+	border-top-right-radius:0px;
+	-webkit-border-bottom-right-radius:37px;
+	-moz-border-radius-bottomright:37px;
+	border-bottom-right-radius:37px;
+	-webkit-border-bottom-left-radius:0px;
+	-moz-border-radius-bottomleft:0px;
+	border-bottom-left-radius:0px;
+	text-indent:0;
+	border:1px solid #ffffff;
+	display:inline-block;
+	color:#ffffff;
+	font-family:Verdana;
+	font-size:15px;
+	font-weight:bold;
+	font-style:normal;
+	height:65px;
+	line-height:65px;
+	width:86px;
+	text-decoration:none;
+	text-align:center;
+	text-shadow:1px 1px 0px #1a1a1a;
+}
+.button:hover {
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #eb1a36), color-stop(1, #c9d4e0) );
+	background:-moz-linear-gradient( center top, #eb1a36 5%, #c9d4e0 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#eb1a36', endColorstr='#c9d4e0');
+	background-color:#eb1a36;
+}.button:active {
+	position:relative;
+	top:1px;
+}
+/* This button was generated using CSSButtonGenerator.com */

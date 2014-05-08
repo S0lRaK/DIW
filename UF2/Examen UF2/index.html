@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Photo finish</title>
+	<meta charset="UTF-8">
+	<!-- <script type="text/javascript" src="video.js"></script> -->
+	<script type="text/javascript">
+		var vid=document.getElementById('video');
+
+		function playVid()
+		{
+			vid.play();
+		}
+
+		function pauseVid()
+		{
+			vid.pause();
+		}
+	</script>
+	<link rel="stylesheet" type="text/css" href="index.css">
+</head>
+<body>
+	<div id="title">Men's Ski Cross Quarter-Final - Sochi 2014 Winter Olympics</div>
+	<div id="video_section">
+		<div id="buttons">
+			<button onclick="playVid()" class="button" >Play</button>
+			<button onclick="pauseVid()" class="button">Pause</button>
+		</div>
+		<video width="480" id="video">	<!-- sense l'etiqueta controls, per amagar el butons del reproductor -->
+			<source src="Men's Ski Cross Quarter-Final - Sochi 2014 Winter Olympics.mp4" type="video/mp4">
+			Your browser does not support the video tag.
+		</video>
+	</div>
+</body>
+</html>
