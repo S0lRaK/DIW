@@ -1,6 +1,7 @@
+document(ready)
 var vid=document.getElementById('video');
 
-vid.onClick = function playVid()
+function playVid()
 {
 	vid.play();
 }
