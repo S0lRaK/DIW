@@ -2,21 +2,31 @@
 <html>
 <head>
 	<title>Photo finish</title>
-	<meta charset="UTF-8">
+	<meta charset='ISO-8859-1'>
+	<!-- jQuery -->
+	<script src="http://code.jquery.com/jquery-2.1.1.js"></script>
+	<!-- Bootstrap -->
+	<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+	<script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+	<!-- Own files -->
 	<script type="text/javascript" src="video.js"></script>
 	<link rel="stylesheet" type="text/css" href="index.css">
 </head>
 <body>
-	<div id="title">Men's Ski Cross Quarter-Final - Sochi 2014 Winter Olympics</div>
+	<div id="title">Men's Ski Cross Quarter-Final (Sochi 2014 Winter Olympics)</div>
 	<div id="video_section">
 		<div id="buttons">
-			<button onclick="playVid()" class="button" >Play</button>
-			<button onclick="pauseVid()" class="button">Pause</button>
+			<button id="btnPlay" class="button">Play</button>
+			<button id="btnPause" class="button">Pause</button>
 		</div>
-		<video width="480" id="video">	<!-- sense l'etiqueta controls, per amagar el butons del reproductor -->
+		<video id="video">	<!-- without 'controls' to hide the defaults -->
 			<source src="Men's Ski Cross Quarter-Final - Sochi 2014 Winter Olympics.mp4" type="video/mp4">
 			Your browser does not support the video tag.
 		</video>
+		<div id="controls">
+			<input id="sliderSpeed" type="range" min="0.3" max="2" value="1" step="0.3">
+			<label>Speed: </label><label id="lblSpeed">x1</label>
+        </div>
 	</div>
 </body>
 </html>

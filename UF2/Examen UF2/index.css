@@ -1,10 +1,37 @@
-body {
+body
+{
 	text-align: center;
+	background-image: url('footer_bg.jpg');
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: 0% 45%;
 }
-#video_section {
-	
+
+#title
+{
+	background-color: #4C45CC;
+	color: #EBEBF5;
+	font-size: large; 
+	margin-bottom: 1%;
 }
-.button {
+
+#buttons
+{
+	margin-bottom: 1%;	
+}
+
+progress
+{
+  	font-size: .6em;
+  	line-height: 1.5em;
+  	text-indent: .5em;
+  	width: 80%;
+  	height: 3.0em;
+  	border: 1px solid #4C45CC;
+}
+
+.button
+{
 	-moz-box-shadow:inset 0px 1px 0px 0px #97c4fe;
 	-webkit-box-shadow:inset 0px 1px 0px 0px #97c4fe;
 	box-shadow:inset 0px 1px 0px 0px #97c4fe;
@@ -39,12 +66,17 @@ body {
 	text-align:center;
 	text-shadow:1px 1px 0px #1a1a1a;
 }
-.button:hover {
+
+.button:hover
+{
 	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #eb1a36), color-stop(1, #c9d4e0) );
 	background:-moz-linear-gradient( center top, #eb1a36 5%, #c9d4e0 100% );
 	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#eb1a36', endColorstr='#c9d4e0');
 	background-color:#eb1a36;
-}.button:active {
+}
+
+.button:active
+{
 	position:relative;
 	top:1px;
 }
