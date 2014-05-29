@@ -24,8 +24,13 @@
 			Your browser does not support the video tag.
 		</video>
 		<div id="controls">
-			<input id="sliderSpeed" type="range" min="0.3" max="2" value="1" step="0.3">
-			<label>Speed: </label><label id="lblSpeed">x1</label>
+			<div class="progress progress-striped active">
+  				<div id="progressBar" class="progress-bar progress-bar-success" role="progressbar" aria-valuemin="0" aria-valuemax="100">
+  					<span id="progressPercent"></span>
+  				</div>
+			</div>
+			<input id="sliderSpeed" type="range" min="0.2" max="2" value="1" step="0.2">
+			<label>Speed:</label><label id="lblSpeed">x1</label>
         </div>
 	</div>
 </body>
